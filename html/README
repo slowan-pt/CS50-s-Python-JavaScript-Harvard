@@ -1,0 +1,17 @@
+Ao criar um arquivo SAAS (como o variaveis.scss), para que o navegador entenda é necessário converter. Usar o comando:
+1. Instala o SASS
+npm install -g sass
+2. Vai no local do arquivo que será convertido e executa o comando:
+"sass nomeDoArquivo.scss:nomeDoArquivo.css"
+3. Vai no arquivo que usará o css, no HEAD, e copia o link
+<link rel="stylesheet" href="nomeDoArquivo.css">
+
+Observação: sempre que realizar alterações no arquivo .scss, é necessário recompilar o arquivo .css.
+1. Pode fazer isso manualmente, executando o comando novamente.
+"sass --watch variaveis.scss:variaveis.css"
+ No entanto, isso só fuciona enquanto o terminal estiver aberto. Se você fechar o terminal, a compilação automática será interrompida.
+
+2. Instalar uma extensão no editor de código, como o Visual Studio Code, que faz isso automaticamente ao salvar o arquivo. Por exemplo, a extensão chamada "Live Sass Compiler" permite compilar automaticamente os arquivos .scss para .css sempre que você salva o arquivo.
+Live Sass Compiler
+
+3. Em projetoc com o VITE, o SASS já vem integrado, então não é necessário instalar nada. Basta criar o arquivo .scss e referenciá-lo no HTML como se fosse um arquivo CSS normal. O VITE cuidará da compilação automaticamente.
