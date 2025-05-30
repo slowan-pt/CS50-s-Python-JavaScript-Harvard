@@ -1,4 +1,13 @@
-Ao criar um arquivo SAAS (como o variaveis.scss), para que o navegador entenda é necessário converter. Usar o comando:
+#ESTRUTURA DO CURSO
+Aula prática 1 (https://video.cs50.io/zFZrkCIc2Oc?screen=HbCJtscq-U8): HTML, CSS, Design Responsivo e Bootstrap
+Aula prática 2 (https://video.cs50.io/NcoBAfJ6l2Q?screen=SU-QJbAZptI): GITHub, Git e GitHub -> Commits, Branches, Pull Requests e Merge
+Aula prática 3 (https://video.cs50.io/EOLPQdVj5Ac?screen=-d-WPlksFpc): Python ->
+
+
+#CONVERSÃO DE ARQUIVOS SAAS PARA CSS
+Para que o navegador entenda os arquivos SAAS, é necessário convertê-los para CSS. O processo envolve a instalação do SASS e a execução de um comando específico para converter o arquivo .scss em .css.
+## Passos para converter arquivos SAAS (.scss) em CSS (.css)
+Ao criar um arquivo SAAS (como o variaveis.scss), para que o navegador entenda é necessário converter. Usar o comando:-
 1. Instala o SASS
 npm install -g sass
 2. Vai no local do arquivo que será convertido e executa o comando:
