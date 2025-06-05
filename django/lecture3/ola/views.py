@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def index (request):
-    return HttpResponse("Olá, mundo!")
+    return render(request, "ola/index.html")
 
 def sloan (request):
     return HttpResponse("Ola Http Reponse")
