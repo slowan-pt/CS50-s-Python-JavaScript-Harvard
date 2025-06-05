@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Tarefas</title>
-    </head>
-    <body>
-        <ul>
-            {% for tarefa in tarefas %}
-                <li> {{tarefa}} </li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+{% extends "tarefas/layout.html" %}
+
+{% block body %}
+    <h1>Tarefas</h1>
+    <ul>
+        {% for tarefa in tarefas %}
+        <li>{{ tarefa }}</li>
+        {% endfor %}
+    </ul>
+{% endblock body %}
