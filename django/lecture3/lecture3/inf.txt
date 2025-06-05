@@ -1,0 +1,36 @@
+
+
+
+#Para criar um novo projeto
+python .\manage.py startapp nomeDoAApp
+
+#1- vai ser criada uma pasta com o nomeDoAApp
+
+#2- em "settings.py", do arquivo principal - aqui o "lecture3" - deverá ser incluído o nomeDoAApp em "INSTALLED_APPS = ["
+INSTALLED_APPS = [
+    'nomeDoAApp',
+]
+
+#3- em "urls.py", do arquivo principal incluir o caminho para ele
+urlpatterns = [
+    path('nomeDoAApp/', include('nomeDoAApp.urls'))
+]
+
+#4- criar um novo arquivo "urls.py", em nomeDoAApp, e inserir o código:
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path ("", views.index, name="index")
+]
+
+#5- em "views.py", na pasta nomeDoAApp, inserir o código:
+import datetime
+from django.shortcuts import render
+
+# Create your views here.
+def index (request):
+    hoje = datetime.datetime.now()
+    return render(request, "anonovo/index.html", {
+        "anonovo": hoje.month == 1 and hoje.day == 1
+    })
