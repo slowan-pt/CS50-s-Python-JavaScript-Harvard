@@ -15,4 +15,6 @@ def ketelyn (request):
     return HttpResponse("Olá, Ketelyn")
 
 def greet (request, name):
-    return HttpResponse(f"Olá, {name.capitalize()}!")
+    return render(request, "ola/greet.html", {
+        "name": name.capitalize()
+    })
