@@ -1,0 +1,11 @@
+{% extends "voos/layout.html" %}
+
+{% block body %}
+    <h1>Voos</h1>
+    <ul>
+        {% for voos in voos %}
+            <li>Voos - {{voos.id}}: De: {{voos.origin}} Para: {{voos.destination}} e Duração: {{voos.duration }}</li>
+        {% endfor %}
+</ul>
+{% endblock %}
+

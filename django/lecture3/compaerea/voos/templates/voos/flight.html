@@ -1,0 +1,13 @@
+{% extends "voos/layout.html" %}  <!-- Aspas ao redor do nome do template -->
+
+{% block body %}
+    <h1>Detalhes do Voo {{ voo.id }}</h1>  <!-- Usando 'voo' da view -->
+    
+    <ul>
+        <li>
+            Origem: {{ voo.origin }}<br>
+            Destino: {{ voo.destination }}<br>
+            Duração: {{ voo.duration }} minutos
+        </li>
+    </ul>
+{% endblock %}
