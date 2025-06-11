@@ -3,7 +3,7 @@
     <head>
         <title>Colors</title>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', () => {
                 /*document.querySelector('#red').onclick = function() {
                     document.querySelector('#hello').style.color = 'red';
                 }
@@ -13,7 +13,7 @@
                 document.querySelector('#blue').onclick = function() {
                     document.querySelector('#hello').style.color = 'blue';
                 }*/
-                document.querySelectorAll('button').forEach(function(button) {
+                document.querySelectorAll('button').forEach(button => {
                     button.onclick = function() {
                         document.querySelector('#hello').style.color = button.dataset.color;
                     }
