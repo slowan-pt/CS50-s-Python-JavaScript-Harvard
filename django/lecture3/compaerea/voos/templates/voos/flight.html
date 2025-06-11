@@ -1,8 +1,6 @@
 {% extends "voos/layout.html" %}
 
 {% block body %}
-    <h1>Detalhes do Voo {{ voo.id }}</h1>
-    
     <ul>
         <li>
             Origem: {{ voo.origin }}<br>
@@ -19,4 +17,7 @@
             <li>Nenhum passageiro neste voo.</li>
         {% endfor %}
     </ul>
+
+    <a href="{%url 'index' %}">Lista de Voos</a>
+
 {% endblock %}
