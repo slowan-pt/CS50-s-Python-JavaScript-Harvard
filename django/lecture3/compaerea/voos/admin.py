@@ -5,5 +5,8 @@ from .models import Airport, Flight, Passenger
 class PassengerAdmin(admin.ModelAdmin):
     filter_horizontal = ('flights',) 
 
+class FlightAdmin(admin.ModelAdmin):
+    list_display = ('id', 'origin', 'destination', 'duration')
+
 admin.site.register(Airport)
-admin.site.register(Flight)
+admin.site.register(Flight, FlightAdmin)
