@@ -1,6 +1,7 @@
 {% extends "voos/layout.html" %}
 
 {% block body %}
+    <h1>Detalhes do Voo {{ voo.id }}</h1>
     <ul>
         <li>
             Origem: {{ voo.origin }}<br>
@@ -18,6 +19,16 @@
         {% endfor %}
     </ul>
 
-    <a href="{%url 'index' %}">Lista de Voos</a>
+    <h2>Adicionar Passageiro</h2>
+    <form action="{% url 'book' voo.id %}" method="post">
+        {% csrf_token %}
+        <select name="passenger_id">  <!-- Corrigido para passenger_id -->
+            {% for passageiro in sem_passageiros %}  <!-- Corrigido para sem_passageiros -->
+                <option value="{{ passageiro.id }}">{{ passageiro }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Reservar Passageiro">
+    </form>
 
+    <a href="{% url 'index' %}">Lista de Voos</a>
 {% endblock %}

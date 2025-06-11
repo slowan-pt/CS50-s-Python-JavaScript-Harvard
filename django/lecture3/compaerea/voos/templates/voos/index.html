@@ -2,6 +2,7 @@
 
 {% block body %}
     <h1>Voos</h1>
+    <h1>Voos (Total: {{ voos.count }})</h1>
     <ul>
         {% for voo in voos %}  
             <li>
