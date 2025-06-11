@@ -3,9 +3,14 @@
 {% block body %}
     <h1>Voos</h1>
     <ul>
-        {% for voos in voos %}
-            <li>Voos - {{voos.id}}: De: {{voos.origin}} Para: {{voos.destination}} e Duração: {{voos.duration }}</li>
+        {% for voo in voos %} 
+            <li>
+                <a href="{% url 'flight' voo.id %}">
+                    Voo {{ voo.id }}: De {{ voo.origin }} Para {{ voo.destination }} ({{ voo.duration }} minutos)
+                </a>
+            </li>
+        {% empty %}
+            <li>Nenhum voo disponível</li>
         {% endfor %}
-</ul>
+    </ul>
 {% endblock %}
-

@@ -12,7 +12,8 @@ def flight(request, flight_id):
     try:
         flight = Flight.objects.get(pk=flight_id)
         return render(request, "voos/flight.html", {
-            "voo": flight  # Passa apenas o objeto flight
+            "voo": flight,  
+            "passageiros": flight.passengers.all()  
         })
     except Flight.DoesNotExist:
         return render(request, "voos/not_found.html")

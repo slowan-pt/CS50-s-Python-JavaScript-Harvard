@@ -1,7 +1,7 @@
-{% extends "voos/layout.html" %}  <!-- Aspas ao redor do nome do template -->
+{% extends "voos/layout.html" %}
 
 {% block body %}
-    <h1>Detalhes do Voo {{ voo.id }}</h1>  <!-- Usando 'voo' da view -->
+    <h1>Detalhes do Voo {{ voo.id }}</h1>
     
     <ul>
         <li>
@@ -9,5 +9,14 @@
             Destino: {{ voo.destination }}<br>
             Duração: {{ voo.duration }} minutos
         </li>
+    </ul>
+    
+    <h2>Passageiros</h2>
+    <ul>
+        {% for passageiro in passageiros %} 
+            <li>{{ passageiro.first }} {{ passageiro.last }}</li>
+        {% empty %}
+            <li>Nenhum passageiro neste voo.</li>
+        {% endfor %}
     </ul>
 {% endblock %}
