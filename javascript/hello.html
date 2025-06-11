@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Hello</title>
+        <script>
+            function hello () {
+                let  heading = document.querySelector('h1');
+                if (heading.innerHTML === "Olá, Mundo!") {
+                    heading.innerHTML = "Até mais";
+                } else {
+                    heading.innerHTML = "Olá, Mundo!";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="hello()">Diga Olá</button>
+        <h1>Olá</h1>
+        <h1 id="h1" >Olá 2</h1>
+    </body>
+</html>

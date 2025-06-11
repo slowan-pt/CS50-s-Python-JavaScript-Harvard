@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Form</title>
+        <script>
+           //Faz o DOM ser carregado e deixa esse bloco na espera, sem que dê erro ante de sua execução
+           document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').onsubmit = function(event) {
+                const name = document.querySelector('#name').value;
+                //document.querySelector('h1').innerHTML = `Olá, ${name}!`
+                alert(`Olá, ${name}!`);
+                }
+
+            });
+        </script>
+    </head>
+    <body>
+        
+        <form>
+            <input autofocus type="text" name="name" id="name">
+            <input type="submit">
+        </form>
+        <h1>Olá</h1>
+    </body>
+</html>
